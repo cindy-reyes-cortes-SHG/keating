@@ -1,18 +1,18 @@
 ﻿/*-------- VARIABLES --------*/
 :root {
-        --color-primary: #000000;
-        --color-secondary: #ffffff;
-        --color-dark-background: #ff0000;
-        --color-light-background: #ff0000;
+        --color-primary: #367C2B;
+        --color-secondary: #FFDD00;
+        /* --color-dark-background: #ff0000;
+        --color-light-background: #ff0000; */
         --color-body-dark: #000000;
-        --color-body-light: #000000;
+        --color-body-light: #F8F8F8;
         --color-primary-button: #000000;
-        --color-secondary-button: #000000;
+        --color-secondary-button: #FFDD00;
         --color-white: #fff;
         --color-black: #000;
-        --color-button-hover: #000000;
-        --font-header: "Manrope", sans-serif;
-        --font-secondary: "Manrope", sans-serif;
+        --color-button-hover: #206715;
+        --font-header: "Oswald", sans-serif;
+        --font-secondary: "Oswald", sans-serif;
         --font-body: "Manrope", sans-serif;
         --font-header-size: 72px;
         --font-header-size-medium: 48px;

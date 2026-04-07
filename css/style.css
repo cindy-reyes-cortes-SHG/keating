@@ -48,19 +48,19 @@ header, nav, article, footer, address {
 
 /*-------- VARIABLES --------*/
 :root {
-        --color-primary: #000000;
-        --color-secondary: #ffffff;
-        --color-dark-background: #ff0000;
-        --color-light-background: #ff0000;
+        --color-primary: #367C2B;
+        --color-secondary: #FFDD00;
+        /* --color-dark-background: #ff0000;
+        --color-light-background: #ff0000; */
         --color-body-dark: #000000;
-        --color-body-light: #000000;
+        --color-body-light: #F8F8F8;
         --color-primary-button: #000000;
-        --color-secondary-button: #000000;
+        --color-secondary-button: #FFDD00;
         --color-white: #fff;
         --color-black: #000;
-        --color-button-hover: #000000;
-        --font-header: "Manrope", sans-serif;
-        --font-secondary: "Manrope", sans-serif;
+        --color-button-hover: #206715;
+        --font-header: "Oswald", sans-serif;
+        --font-secondary: "Oswald", sans-serif;
         --font-body: "Manrope", sans-serif;
         --font-header-size: 72px;
         --font-header-size-medium: 48px;
@@ -82,16 +82,32 @@ section{
     padding: 50px 40px;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
 button{
     border: none;
     background-color: var(--color-primary-button);
     transition:.25s;
+    border-radius: 8px;
+
 
     a{
-    font-family: var(--font-body);
-    font-size: var(--font-body-size);
+    font-family:var(--font-header);
+    font-size: 12px;
     color: var(--color-white);
     padding: var(--padding-button);
+    font-weight: 600;
+    text-transform: uppercase;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -101,8 +117,8 @@ button{
 }
 
 .btn{
-    font-family: var(--font-body);
-    font-size: var(--font-body-size);
+    font-family: var(--font-header);
+    font-size: 12px;
     background-color: var(--color-primary-button);
     color: var(--color-white);
     padding: var(--padding-button);
@@ -111,6 +127,10 @@ button{
     align-items: center;
     gap: 5px;
     transition:.25s;
+    border-radius: 8px;
+    font-family: var(--font-header);
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 button:hover{
@@ -123,18 +143,18 @@ button:hover{
 }
 
 .btn:hover{
-    background-color: var(--color-primary-button);
-    color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: var(--color-white);
 
     a{
     color: var(--color-primary);
     }
 }
 
-
 .secondary-btn{
     border: none;
     background-color: var(--color-secondary-button);
+    color: var(--color-black);
     transition:.25s;
 }
 
@@ -145,6 +165,13 @@ button:hover{
     a{
     color: var(--color-body-light);
     }
+}
+
+.border-btn{
+    border: 1px solid #D6D6D6;
+    background-color: transparent;
+    color: var(--color-black);
+    transition:.25s;
 }
 
 .drk-background{
@@ -283,6 +310,7 @@ body {
 
 h1, h2, h3{
     font-family: var(--font-header);
+    text-transform: uppercase;
 }
 
 h1, h2{
@@ -322,31 +350,102 @@ hr{border:#000 1px solid;}
 
 
 .top-nav {
-	background-color: #fff;
-	color: #000;
-	padding: 5px 40px;
+	background-color: var(--color-primary);
+	color: #fff;
 	display: flex;
 	justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
 }
 
 .top-links{
 	gap: 25px;
+
+
+}
+
+.top-contact{
+
+    a{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        font-size: 14px;
+    }
+
+    i{
+        font-size: 12px;
+    color: var(--color-secondary);
+    }
+}
+
+.social-links {
+    color: var(--color-white);
+    gap: 0px;
+
+    a{
+        background-color: #206715;
+        padding: 5px;
+        display: block;
+        border-left: 1px solid #ffffff25;
+    }
 }
 
 .top-links a{
-	color: #000;
+	color: #fff;
+}
+
+.mid-nav{
+    background-color: var(--color-body-light);
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.mid-nav-left{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.mid-nav-right{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .bottom-links{
 	gap: 25px;
+    align-items: center;
+    gap: 35px;
+
+    i{
+        font-size: 10px;
+        padding-left: 5px;
+    }
 }
 
 .bottom-links a{
-	color: #FFFFFF;
-    font-family: var(--font-secondary-header-size);
+
+	color: var(--color-black);
+    font-family: var(--font-header);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
 }
 
+.button-container-top{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 
+    a{
+        font-size: 14px;
+    }
+}
 
 .left-menu {}
 
@@ -356,9 +455,10 @@ hr{border:#000 1px solid;}
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 40px;
+	padding: 25px 40px;
 	gap: 25px;
-	background-color: black;
+	background-color: var(--color-white);
+    border-bottom: 1px solid #F2F2F2;
 }
 
 
@@ -385,6 +485,41 @@ hr{border:#000 1px solid;}
 
 
 /* Search Header */
+
+.search-box-container{
+    align-items: center;
+    gap: 10px;
+
+    input{
+        padding: 11px 40px 11px 11px;
+        border-radius: 8px;
+        border: 1px solid #8B8B8B25 !important;
+        font-family: var(--font-body);
+        font-size: 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.searchbox-item.searchbox2{
+    position: relative;
+    width: 400px;
+
+    &:after{
+        content: "\f002";
+        font-family: "Font Awesome 7 Free";
+        font-weight: 900;
+        color: var(--color-black);
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        z-index: 5;
+        font-size: 12px;
+    }
+}
+
 /*---INVENTORY SEARCH IN HEADER---*/
 
 
@@ -665,8 +800,10 @@ a.video-chat.des-video-chat.collapsible-contact-list-item{
 /*---------- RESPONSIVE STYLES ----------*/
 
 
-@media only screen and (max-width: 1200px) {
-
+@media only screen and (max-width: 1100px) {
+    .searchbox-item.searchbox2{
+        width: auto;
+    }
 }
 
 
