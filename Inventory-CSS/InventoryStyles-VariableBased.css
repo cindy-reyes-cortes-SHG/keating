@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* CSS Document */
+
+:root {
+    --bg-color: #f2f2f2;
+    --bg-color-2: #fff;
+    --button-bg-color-1: #2a72b1;
+    --button-bg-color-2: #e5860e;
+    --button-bg-color-3: #ddd;
+    --text-color-1: #000;
+    --text-color-2: #000;
+    --link-color: #0a0303;
+}
+
+/*
+NOTE: Variables do not work in IE. Here is a workaround:
+
+1.	Code using the variables as you normally would.
+2.	Paste your code into the left section here: https://madlittlemods.github.io/postcss-css-variables/playground/
+3.  Click the Gear icon and check "Preserve"
+4.	Copy the code to the right, and paste it over everything in this document.
+5.	To make edits to this sheet in the future, simply open the master file \\sandhills.int\dev\Websites\WebDesign\Training\DES\Website-Structure\Inventory-CSS\InventoryStyles-VariableBased.css and copy everything EXCEPT for the variables enclosed in :root above and replace everything in your site file EXCEPT for the variables enclosed in :root above.
+6.	Continue editing from there, and when you are done, repeat steps 2-4.
+*/
+
+/*------------------------------ START CSS STYLES. REPLACE EVERYTHING BELOW THIS ---------------------------------*/
+
+/*------------------------------ General Listings Page---------------------------------*/
+
+/*----Page Background Color----*/
+.body-content .body-wrapper {
+    background: var(--bg-color) !important;
+}
+
+/*----Email and Print Buttons----*/
+.media-buttons button {
+    background: var(--button-bg-color-3) !important;
+    color: var(--text-color-2) !important
+}
+
+.media-buttons button:hover {
+    background: var(--bg-color) !important
+}
+
+/*----Listing Background Color & Text Color Change----*/
+.list-container .list-listing {
+    background: var(--bg-color-2) !important;
+    color: var(--text-color-1) !important;
+}
+
+/*---Sidebar Background Color & Text Color----*/
+.list-content .faceted-search-content {
+    background: var(--bg-color-2) !important;
+    color: var(--text-color-1) !important
+}
+
+.faceted-search-content .faceted-section-box .faceted-view-more-btn {
+    background: var(--button-bg-color-1) !important
+}
+
+/*---Sidebar Heading Background Color----*/
+.faceted-search-content .faceted-section-head {
+    background: var(--button-bg-color-3) !important;
+}
+
+/*----Filter button color change------*/
+.selected-facet {
+    background: var(--button-bg-color-1) !important;
+}
+
+input[type="submit"],
+button[type="submit"],
+.btn,
+.button {
+    background: var(--button-bg-color-2) !important;
+}
+
+/*----View Details Button----*/
+.view-listing-details-link {
+    background: var(--button-bg-color-1) !important;
+}
+
+.view-listing-details-link:hover {
+    background: var(--button-bg-color-2) !important;
+}
+
+/*----Email Seller Button----*/
+.email-seller-link {
+    background: var(--button-bg-color-2) !important;
+}
+
+.email-seller-link:hover {
+    background: var(--button-bg-color-1) !important;
+}
+
+/*---Page Title----*/
+.list-content .list-title .list-title-text {
+    color: var(--text-color-1) !important;
+    font-size: 22px !important;
+    line-height: 28px !important;
+}
+
+/*----Listings # showing text----*/
+.list-content .list-title .list-listings-count {
+    color: var(--text-color-1) !important;
+}
+
+/*---Description text color (if different than body text color)----*/
+.listing-description-text {
+    color: var(--text-color-2) !important;
+}
+
+/*----Price----*/
+.listing-main-stats .price {
+    color: var(--text-color-1) !important;
+}
+
+/*---Listings Count----*/
+.list-content .list-top-section .listing-option-bar .list-listings-count {
+    color: var(--text-color-1) !important
+}
+
+/*---Any Messages----*/
+.info {
+    color: var(--text-color-1) !important
+}
+
+/*------------------------------Listings Details Page---------------------------------*/
+/*----Details Page Header----*/
+.main-detail-data .detail-title {
+    color: var(--text-color-1) !important
+}
+
+/*----Listing Category----*/
+.detail-content .detail-main-body .main-detail-data .detail-category {
+    color: var(--text-color-1) !important
+}
+
+/*----Make an Offer Button----*/
+.main-detail-data .offer-btn {
+    background: var(--button-bg-color-1) !important
+}
+
+.main-detail-data .offer-btn:hover {
+    background: var(--button-bg-color-2) !important
+}
+
+/*----Details----*/
+.detail-content .detail-main-body .main-detail-data {
+    background: var(--bg-color-2) !important;
+}
+
+/*----Details Price----*/
+.detail-price {
+    color: var(--text-color-2) !important;
+}
+
+.detail-content .detail-main-body .main-detail-data .detail-btn-calc:hover {
+    background: var(--button-bg-color-3) !important
+}
+
+.detail-content .detail-main-body .main-detail-data .detail-btn-calc {
+    background: var(--bg-color) !important;
+    color: var(--text-color-1) !important
+}
+
+/*----Contact Information----*/
+.detail-content .dealer-info {
+    color: var(--text-color-1) !important
+}
+
+/*----Spec Title Background & Color ----*/
+.detail-content .data-row .data-label {
+    background: var(--bg-color-2) !important;
+    color: var(--text-color-1) !important;
+}
+
+/*----Breadcrumb - Search Results button----*/
+.detail-content .search-results {
+    color: var(--text-color-2) !important;
+}
+
+/*----Breadcrumb Path above Searach Results----*/
+.breadcrumbs .breadcrumbs-element {
+    color: var(--text-color-1) !important;
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+/*----Background color of widgets (if it matches the page background)----*/
+.listing-widgets a {
+    background: var(--button-bg-color-3) !important;
+    color: var(--text-color-1) !important
+}
+
+.listing-widgets a:hover {
+    background: var(--bg-color) !important
+}
+
+/*----All Details (e.g. year, manu, etc.)----*/
+.detail-additional-data *,
+.detail-content .detail-additional-data .data-row .data-value {
+    color: var(--text-color-1) !important;
+}
+
+.detail-content .detail-additional-data .data-row .data-value {
+    background: var(--bg-color) !important
+}
+
+/*----Commercial Financing Legal Info----*/
+.legal-text-content {
+    color: var(--text-color-1);
+}
+
+/*---All Other Links----*/
+.container.body-content a {
+    color: var(--link-color)
+}
+
+/*---Return to Listings----*/
+.mobile-breadcrumb {
+    background-color: var(--bg-color) !important
+}
+
+/*------------------------------Show All Content---------------------------------*/
+.show-all-modal-content {
+    background: var(--bg-color-2) !important;
+}
+
+/* CSS Document */

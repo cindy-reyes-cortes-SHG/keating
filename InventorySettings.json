@@ -1,0 +1,11 @@
+
+{
+"restrictByPCID":"True",  
+"agPCID":"0", 
+"constructionPCID":"0",
+"trucksTrailersPCID":"0", 
+"aircraftPCID":"0", 
+"cranesPCID":"0", 
+"turfPCID":"0", 
+"otherItemsPCID":"0"
+}

@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*------------------------------ General Listings Page---------------------------------*/
+
+/*----Page Background Color----*/
+.body-content .body-wrapper {background:#000 !important;}
+
+/*----Listing Background Color & Text Color Change----*/
+.list-container .list-listing {background:#000 !important; color:#fff !important}
+
+/*---Sidebar Background Color & Text Color----*/
+.list-content .section-box {background:#000 !important; color:#fff !important}
+
+/*----Filter button color change------*/
+.current-facet {background:#000 !important;}
+
+/*----View Details Button----*/
+.view-listing-details-link {background:#000 !important;}
+.view-listing-details-link:hover {background:#ddd !important;}
+
+/*---Page Title----*/
+.list-content .list-title .list-title-text {color:#000 !important; font-size:22px !important; line-height: 28px !important; }
+
+/*----Listings # showing text----*/
+.list-content .list-title .list-listings-count {color:#000 !important;}
+
+/*---Description text color (if different than body text color)----*/
+.listing-description-text {color:red !important;}
+
+/*----Price----*/
+.listing-main-stats .price {color:#000 !important;}
+
+
+/*------------------------------Listings Details Page---------------------------------*/
+/*----Details Page Header----*/
+.main-detail-data .detail-title {color:#000 !important}
+
+/*----Make an Offer Button----*/
+.main-detail-data .offer-btn {background:#000 !important}
+.main-detail-data .offer-btn:hover {background:#ddd !important}
+
+/*----Details Price----*/
+.detail-price {color:red !important;}
+
+/*----Spec Title Background & Color ----*/
+.detail-content .data-row .data-label {background:#fff !important; color:#000 !important;}
+
+/*----Breadcrumb - Search Results button----*/
+.detail-content .search-results {color:red !important;}
+
+/*----Breadcrumb Path above Searach Results----*/
+.breadcrumbs .breadcrumbs-element {color:#000 !important; font-size:16px !important; font-weight: bold;}
+
+/*----Background color of widgets (if it matches the page background)----*/
+.listing-widgets a {background:#fff !important;}

@@ -1,0 +1,178 @@
+<!--#include virtual="/truckdlr/includes/dlrfunctions.inc"-->
+	i
+<!DOCTYPE HTML>
+<html data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)" lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>TITLE OF WEBPAGE</title>
+<meta name="description" content="META DESCRIPTION">
+<meta property="og:title" content="TITLE OF WEBPAGE"/>
+<meta property="og:description" content="META DESCRIPTION" />
+<link rel="canonical" href="https://www.example.com/contact-us.htm"/>
+<!--#include file="meta.htm" -->
+<!--#include file="gtag.htm" -->
+</head> 
+
+<body>
+<!--#include file="header.htm" -->
+<main class="contact-main">
+
+
+<section class="cover">
+	<div class="inner-title">
+		<h1>Lorem ipsum dolor sit amet</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+	</div>
+	<div class="button-container">
+		<button class="secondary-btn"><a href="#">Button<i class="fa-solid fa-arrow-right"></i></a></button>
+	</div>
+</section>
+
+<section>
+	<h2>Contact Us</h2>
+	<p>Fields marked with * are required.</p>
+	<div>
+		<form method="post" action="contact-us.htm" onSubmit="return validation(this)">
+		<input type="hidden" name="form_fieldlist" value="Primary_Name,Last_Name,Email,Phone,State,City,Comments">
+		<input type="hidden" name="form_subject" value="Contact Form Submission">
+		<input type="hidden" name="form_thankyou" value="thankyou.htm">
+		<input type="hidden" name="form_to" value="ENTER EMAIL">
+	<div id="formpage">
+		<div class="form-field-flex">
+			<label for="Primary_Name" class="sr-only">First Name</label>
+			<input type="text" name="Primary_Name" id="Primary_Name" placeholder="First Name *">
+			<label for="Last_Name" class="sr-only">Last Name</label>
+			<input type="text" name="Last_Name" id="Last_Name" placeholder="Last Name *">
+		</div>
+		
+		<div class="form-field-flex">
+			<label for="Email" class="sr-only">Email</label>
+			<input type="email" name="Email" id="Email" placeholder="Email *">
+			<label for="Phone" class="sr-only">Phone</label>
+			<input type="text" name="Phone" id="Phone" placeholder="Phone *">
+		</div>
+		<div class="form-field-flex">
+			<label for="State" class="sr-only">State</label>
+			<input type="text" name="State" id="State" placeholder="State *">
+			<label for="City" class="sr-only">City</label>
+			<input type="text" name="City" id="City" placeholder="City *">
+		</div>
+		<label for="Comments" class="sr-only">Comments</label>
+		<textarea name="Comments" id="Comments" placeholder="Comments*"></textarea> 	
+		
+				<div id="btn" class="include-captcha">
+
+				<!-- #include virtual="/truckdlr/includes/shapesmodule.inc"-->
+
+					<div class="captcha-button">
+						 <input class="submit-button" type="submit" value="Submit">
+					 </div>
+				</div>
+		</div>
+		</form>
+		<div class="button" id="submit-btn">
+			<button onclick="openCaptcha()">Submit</button>
+		</div>
+</div>
+</section>
+
+<section class="google-map">
+<iframe>Here</iframe>
+</section>
+
+</main>
+	
+<!--#include file="footer.htm" -->
+<script type="text/javascript" src="/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="/js/mobilemenu.js"></script>
+<script type="text/javascript" src="../js/formoutput.js"></script>
+<!-- Scroll Transition-->
+<script type="text/javascript" src="/js/gsap.min.js"></script>
+<script type="text/javascript" src="/js/ScrollTrigger.min.js"></script>
+<script type="text/javascript" src="/js/scroll-custom.js"></script>
+<script language="javascript" type="text/javascript">
+	function validation(passForm)
+	{
+	
+		if (passForm.Primary_Name.value == "")
+		{
+			alert("Please enter your Name.")
+			passForm.Primary_Name.focus()
+			return false
+		}
+		
+		if (passForm.Last_Name.value == "")
+		{
+			alert("Please enter your Last Name.")
+			passForm.Last_Name.focus()
+			return false
+		}
+
+		if (passForm.Email.value == "")
+		{
+			alert("Please enter your Email.")
+			passForm.Email.focus()
+			return false
+		}
+		
+		if (passForm.Phone.value == "")
+		{
+			alert("Please enter your Phone.")
+			passForm.Phone.focus()
+			return false
+		}
+		
+		if (passForm.State.value == "")
+		{
+			alert("Please enter your State.")
+			passForm.State.focus()
+			return false
+		}
+		
+		if (passForm.City.value == "")
+		{
+			alert("Please enter your City.")
+			passForm.City.focus()
+			return false
+		}
+
+		if (passForm.Comments.value == "")
+		{
+			alert("Please enter your Comments.")
+			passForm.Comments.focus()
+			return false
+		}
+
+		var answer = document.getElementById('CaptchaAnswer').value;
+		if (answer == "")
+		{
+			alert("Please enter the characters for the security image.")
+			passForm.CaptchaAnswer.focus()
+			return false
+		}
+		
+		return true
+	}
+</script>
+<script>
+	function openCaptcha() {
+		var i = document.getElementById("btn");
+		var x = document.getElementById("submit-btn");
+		
+		if (!i.style.display || i.style.display === "none"){
+			i.style.display = "block";
+			x.style.display = "none";
+}else {
+	i.style.display = "none";
+	}	
+}
+</script>
+</body>
+
+
+
+</html>
+

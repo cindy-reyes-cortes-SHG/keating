@@ -1,0 +1,315 @@
+﻿/*-------- VARIABLES --------*/
+:root {
+        --color-primary: #000000;
+        --color-secondary: #ffffff;
+        --color-dark-background: #ff0000;
+        --color-light-background: #ff0000;
+        --color-body-dark: #000000;
+        --color-body-light: #000000;
+        --color-primary-button: #000000;
+        --color-secondary-button: #000000;
+        --color-white: #fff;
+        --color-black: #000;
+        --color-button-hover: #000000;
+        --font-header: "Manrope", sans-serif;
+        --font-secondary: "Manrope", sans-serif;
+        --font-body: "Manrope", sans-serif;
+        --font-header-size: 72px;
+        --font-header-size-medium: 48px;
+        --font-header-size-sml: 32px;
+        --font-header-span-size: 21px;
+        --font-header-span-size-sml: 18px;
+        --font-secondary-header-size: 48px;
+        --font-secondary-header-size-medium: 36px;
+        --font-secondary-header-size-sml: 18px;
+        --font-body-size: 16px;
+        --font-weight-normal: 500;
+        --font-weight-bold: 700;
+        --padding-button: 10px 15px;
+}
+
+.clear {
+	clear: both;
+}
+
+/***** Start of primary nav ******/
+
+#menu-button {
+	display: none;
+}
+
+nav.mobile {
+	display: none;
+}
+
+nav.primary {
+	padding: 0;
+	display: inline-block;
+	margin: 0;
+	width: 100%;
+	position: relative;
+}
+
+nav.primary ul {
+	display: flex;
+	list-style: none;
+}
+
+nav.primary ul li{
+	position: relative;
+}
+
+nav.primary ul li a {
+	margin: 0;
+	text-align: center;
+	-webkit-transition: .4s ease-in;
+	-moz-transition: .2s ease-in;
+	-o-transition: .2s ease-in;
+	transition: .2s ease-in;
+	white-space: nowrap;
+}
+
+nav.primary ul li a:hover {
+	z-index: 9999999999;
+}
+
+/* Appearance of the sub-level links */
+nav.primary ul li li a {
+	display: block;
+	font-size: 16px;
+	line-height: 39px;
+	padding: 10px 35px;
+	color: #000000;
+	background-color: #FFFFFF;
+	text-align: left;
+	transition: 0.30s;
+	font-family: var(--font-body);
+}
+
+/* Appearance of the sub-level links on hover */
+nav.primary ul li li a:hover {
+	background-color: var(--color-primary);
+	color: #FFFFFF;
+}
+
+/* This controls the Primary nav dropdowns for sublinks. Should not have to edit this too muuch */
+nav.primary ul ul {
+	display: none;
+	position: absolute;
+}
+
+nav.primary ul ul ul {
+	position: absolute;
+	left: 100%;
+	top: 0;
+}
+
+nav.primary ul li:hover>ul {
+	display: block;
+	line-height: 18px;
+	z-index: 100;
+}
+
+nav.primary ul ul li {
+	float: none;
+	width: auto;
+	position: relative;
+	margin: 0;
+	display: block;
+	top: 15px;
+}
+
+/******** End of primary Nav ***************/
+
+@media screen and (max-width: 900px) {
+
+	/*==============================
+	Mobile Nav Styles			
+================================*/
+	nav.primary {
+		display: none;
+	}
+
+	#menu-button {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 24px;
+		z-index: 400;
+		/* needs to be lower than nav.mobile, adjust as needed */
+		background: black;
+		text-align: right;
+		border-bottom: rgba(255, 255, 255, 0.25) 0.25px solid;
+		padding: 5px 40px;
+
+	}
+
+	#menu-button a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: normal;
+		cursor: pointer;
+	}
+
+	nav.mobile {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: -300px;
+		width: 300px;
+		height: 100%;
+		background: var(--color-primary);
+		z-index: 500;
+		/* needs to be higher than #menu-button, adjust as needed */
+		overflow: hiden;
+	}
+
+	/* MENU HEADER STYLES */
+
+	nav.mobile .mobile_top {
+		padding: 15px 35px;
+		text-align: right;
+	}
+
+
+
+	/* MENU CLOSE 'X' BUTTON */
+
+	.mobile-top-menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+	}
+
+	nav.mobile .menu-toggle {
+		color: #FFFFFF;
+	}
+
+
+	*/ nav.mobile .menu-toggle:hover {
+		/* Menu close button on hoveer */
+		color: var(--color-primary-lite);
+	}
+
+	/* MENU LIST STYLE */
+	nav.mobile ul {
+		list-style: none;
+		font-weight: 300;
+		margin: 0;
+		padding: 0;
+	}
+
+	nav.mobile ul li {
+		position: relative;
+	}
+
+	/* FIRST LEVEL */
+	nav.mobile ul li a {
+		position: relative;
+		display: block;
+		font-size: 15px;
+		padding: 15px 35px;
+		color: #FFFFFF;
+		text-decoration: none;
+		text-align: left;
+		font-weight: 500;
+		transition: .25s;
+		cursor: pointer;
+	}
+
+	nav.mobile ul li a:hover {
+		color: red;
+	}
+
+	/* SECOND LEVEL */
+
+	nav.mobile ul li li a {
+		position: relative;
+		display: block;
+		text-decoration: none;
+	}
+
+	nav.mobile ul li li a:hover {
+	
+	}
+
+	/* THIRD LEVEL */
+	nav.mobile ul li li li:last-child {
+		border: none;
+	}
+
+	nav.mobile ul li li li a {
+		background: #555;
+		position: relative;
+		display: block;
+		padding: 10px 10px 10px 25px;
+		color: #ccc;
+		text-decoration: none;
+		border-left: 4px #555 solid;
+	}
+
+	nav.mobile ul li li li a:hover {
+		background: rgba(85, 85, 85, 0.5);
+	}
+
+	a.click {
+		display: flex !important;
+		justify-content: space-between !important;
+		align-items: center !important;
+	}
+
+
+	/* FONT AWESOME ICONS */
+	nav.mobile ul li a .fa {
+		width: 25px;
+		font-weight: 100;
+		padding: 8px 3px;
+		margin: 0 6px 0 0;
+		text-align: center;
+		background: #292929;
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		border-radius: 30px;
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	}
+
+
+	nav.mobile ul li .fa-chevron-down {
+		color: #FFFFFF;
+	}
+
+	.mobile:not(.open)+.menu-toggle.exit-click {
+		display: none;
+	}
+
+	.mobile.open+.menu-toggle.exit-click {
+		position: fixed !important;
+		top: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		bottom: 0 !important;
+		z-index: 499;
+		pointer-events: none;
+		background: rgba(36, 32, 33, 0.5);
+		opacity: 0;
+		transition: ease opacity 0.3s;
+
+	}
+
+	/******** End of Toggle Overlay ***************/
+
+	/******** Menu Overlay ***************/
+
+	.mobile.open+.menu-toggle.exit-click {
+		pointer-events: auto;
+		opacity: 1;
+		box-shadow: 0 0 10px 2px rgba(0, 0, 0, .4);
+	}
+
+	body.menu-toggle.exit-click {
+		overflow: hidden !important;
+	}
+
+
+}

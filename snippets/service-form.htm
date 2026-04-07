@@ -1,0 +1,187 @@
+<!--#include virtual="marketbookdlr/includes/dlrfunctions.inc"-->
+
+
+<!DOCTYPE HTML>
+<html data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)" lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>TITLE OF WEBPAGE</title>
+<meta name="description" content="META DESCRIPTION">
+<meta property="og:title" content="TITLE OF WEBPAGE"/>
+<meta property="og:description" content="META DESCRIPTION" />
+<link rel="canonical" href="https://www.example.com/.htm"/>
+<!--#include file="meta.htm" -->
+<!--#include file="gtag.htm" -->
+</head> 
+
+<body>
+
+<!--#include file="header.htm" -->
+
+
+
+
+<section class="about-us-3" id="service-request-form">
+
+
+	<div class="parts-request-form">
+	<h2><span>Schedule Your</span>Service Today</h2>
+	<p>Fields marked with * are required.</p>
+		<form method="post" action="/service-department.htm" onSubmit="return validation(this)">
+		<input type="hidden" name="form_fieldlist" value="Primary_Name,Company_Name,Email,Phone,Make,Model,Year,VIN,Date,Time,Comments">
+		<input type="hidden" name="form_subject" value="Service Request Submission">
+		<input type="hidden" name="form_thankyou" value="thankyou.htm">
+		<input type="hidden" name="form_to" value="j.deleon@comarequipment.com">
+	<div id="formpage">
+		<div class="form-field-flex">
+			<label for="Primary_Name" class="sr-only">Full Name</label>
+			<input type="text" name="Primary_Name" id="Primary_Name" placeholder="Full Name *">
+			<label for="Company_Name" class="sr-only">Company Name</label>
+			<input type="text" name="Company_Name" id="Company_Name" placeholder="Company Name">
+
+		</div>
+		
+		<div class="form-field-flex">
+			<label for="Email" class="sr-only">Email</label>
+			<input type="email" name="Email" id="Email" placeholder="Email *">
+			<label for="Phone" class="sr-only">Phone</label>
+			<input type="text" name="Phone" id="Phone" placeholder="Phone *">
+		</div>
+		<h3>Tell us about your equipment?</h3>
+		<div class="form-field-flex">
+			<label for="Make" class="sr-only">Make</label>
+			<input type="text" name="Make" id="Make" placeholder="Make *">
+			<label for="Model" class="sr-only">Model</label>
+			<input type="text" name="Model" id="Model" placeholder="Model *">
+		</div>
+		<div class="form-field-flex">
+			<label for="Year" class="sr-only">Year</label>
+			<input type="text" name="Year" id="Year" placeholder="Year *">
+			<label for="VIN" class="sr-only">VIN</label>
+			<input type="text" name="VIN" id="VIN" placeholder="VIN">
+		</div>
+		<div class="form-field-flex">
+			<label for="Date" class="sr-only">Preferred Date</label>
+			<input type="date" name="Date" id="Date" placeholder="Preferred Date">
+			<label for="Time" class="sr-only">Preferred Time</label>
+			<input type="time" name="Time" id="Time" placeholder="Preferred Time">
+		</div>
+		<h3>Please specify the type of service you are looking for?</h3>
+		<label for="Comments" class="sr-only">Comments</label>
+		<textarea name="Comments" id="Comments" placeholder="Comments *"></textarea> 	
+		
+				<div id="btn" class="include-captcha">
+
+				<!-- #include virtual="/marketbookdlr/includes/shapesmodule.inc"-->
+
+					<div class="captcha-button">
+						 <input class="submit-button" type="submit" value="Submit Now">
+					 </div>
+				</div>
+		</div>
+		</form>
+		<div class="button" id="submit-btn">
+			<button onclick="openCaptcha()">Submit Now <i class="fa-solid fa-arrow-right"></i></button>
+		</div>
+
+	</div>
+</section>
+
+	
+	
+<!--#include file="footer.htm" -->
+<script type="text/javascript" src="/js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="/js/mobilemenu.js"></script>
+<script type="text/javascript" src="../js/formoutput.js"></script>
+<!-- Scroll Transition-->
+<script type="text/javascript" src="/js/gsap.min.js"></script>
+<script type="text/javascript" src="/js/ScrollTrigger.min.js"></script>
+<script type="text/javascript" src="/js/scroll-custom.js"></script>
+<script language="javascript" type="text/javascript">
+	function validation(passForm)
+	{
+	
+		if (passForm.Primary_Name.value == "")
+		{
+			alert("Please enter your Name.")
+			passForm.Primary_Name.focus()
+			return false
+		}
+		
+
+		if (passForm.Email.value == "")
+		{
+			alert("Please enter your Email.")
+			passForm.Email.focus()
+			return false
+		}
+		
+		if (passForm.Phone.value == "")
+		{
+			alert("Please enter your Phone.")
+			passForm.Phone.focus()
+			return false
+		}
+		
+		if (passForm.Make.value == "")
+		{
+			alert("Please enter the Make of your equipment.")
+			passForm.Make.focus()
+			return false
+		}
+
+		if (passForm.Model.value == "")
+		{
+			alert("Please enter the Model of your equipment.")
+			passForm.Model.focus()
+			return false
+		}
+
+		if (passForm.Year.value == "")
+		{
+			alert("Please enter the Year of your equipment.")
+			passForm.Year.focus()
+			return false
+		}
+		
+		if (passForm.Comments.value == "")
+		{
+			alert("Please enter your comments.")
+			passForm.Comments.focus()
+			return false
+		}
+
+		var answer = document.getElementById('CaptchaAnswer').value;
+		if (answer == "")
+		{
+			alert("Please enter the characters for the security image.")
+			passForm.CaptchaAnswer.focus()
+			return false
+		}
+		
+		return true
+	}
+</script>
+<script>
+	function openCaptcha() {
+		var i = document.getElementById("btn");
+		var x = document.getElementById("submit-btn");
+		
+		if (!i.style.display || i.style.display === "none"){
+			i.style.display = "block";
+			x.style.display = "none";
+}else {
+	i.style.display = "none";
+	}	
+}
+</script>
+
+</body>
+
+
+
+</html>
+

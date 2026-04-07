@@ -1,0 +1,34 @@
+<div id="search" class="search-bg" style="display:none">
+  <div class="search-wrap page-wid">
+    <form class="search-header" method="get" action="/inventory/?">
+      <input type="hidden" name="/listings/search?" value="1"/>
+      <input type="hidden" name="DSCompanyID" value="169020"/>
+      <input type="hidden" name="settingscrmid" value="32911626"/>
+	  <label for="keywords" class="sr-only">Search Inventory</label>
+      <input type="text" name="keywords" class="searchTerm" id="keywords" placeholder="Search Inventory">
+      <button type="submit" class="search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <div class="clear"></div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+	function showHide(elementid){
+		if (document.getElementById(elementid).style.display == 'none'){
+			document.getElementById(elementid).style.display = '';
+			$("#text-box").focus();
+			
+		} else {
+			document.getElementById(elementid).style.display = 'none';
+		}
+	}
+	
+	
+document.addEventListener('mouseup', function(e) {
+    var container = document.getElementById('search');
+    if (!container.contains(e.target)) {
+        container.style.display = 'none';
+    }
+});
+	
+
+</script>
