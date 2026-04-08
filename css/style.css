@@ -889,6 +889,10 @@ a.video-chat.des-video-chat.collapsible-contact-list-item{
     .no-break{
         display: none;
     }
+
+    .search-box-container{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 500px) {

@@ -121,6 +121,18 @@ nav.primary ul ul li {
 
 /******** End of primary Nav ***************/
 
+@media screen and (max-width: 1050px){
+.bottom-links{
+	gap: 25px;
+}
+}
+
+@media screen and (max-width: 950px){
+.bottom-links{
+	gap: 20px;
+}
+}
+
 @media screen and (max-width: 900px) {
 
 	/*==============================
@@ -129,6 +141,12 @@ nav.primary ul ul li {
 	nav.primary {
 		display: none;
 	}
+.mid-nav-right{
+	.secondary-btn{
+	display: none;
+	}
+}
+
 
 	#menu-button {
 		display: flex;
