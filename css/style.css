@@ -99,13 +99,11 @@ button{
     background-color: var(--color-primary-button);
     transition:.25s;
     border-radius: 8px;
-
-
     a{
     font-family:var(--font-header);
     font-size: 12px;
     color: var(--color-white);
-    padding: var(--padding-button);
+    padding: 9px 15px;
     font-weight: 600;
     text-transform: uppercase;
     display: flex;
@@ -360,6 +358,21 @@ hr{border:#000 1px solid;}
 
 .top-links{
 	gap: 25px;
+
+        list-style-type: none;
+        display: flex;
+        gap: 25px;
+        text-decoration: none;
+
+    li a{
+            margin: 0;
+    text-align: center;
+    -webkit-transition: .4s ease-in;
+    -moz-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
+    transition: .2s ease-in;
+    white-space: nowrap;
+    }
 
 
 }
