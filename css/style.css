@@ -716,22 +716,34 @@ div#submit-btn{
 /*-------- FOOTER STYLES ----------------*/
 footer{
     font-family: var(--font-body);
+    background-color: #232323;
 
     ul{
         list-style-type: none;
     }
 
+    a{
+        color: var(--color-white);
+    }
+
 }
 
 .top-footer{
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
-    padding: 25px 40px;
+    padding: 75px 50px;
 }
 
 .footer-logo{
     width: 250px;
+    margin-bottom: 25px;
+
+    img{
+        width: 100%;
+    }
+}
+.footer-links{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
 .left-footer{
@@ -742,11 +754,40 @@ footer{
 
 }
 
+.quicklinks{
+    span{
+        color: var(--color-secondary);
+        font-family: var(--font-header);
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    ul{
+        line-height: 32px;
+    }
+
+    p{
+        color: #fff;
+    }
+}
+
+.quick-footer{
+    justify-content: space-between;
+}
+
+
+
 
 
 .bottom-footer{
-    text-align: right;
+    text-align: left;
     padding: 10px 40px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 300;
 }
 
 /*----INVENTORY STYLES - KEEP AT BOTTOM OF CSS----*/
