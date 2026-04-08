@@ -14,14 +14,14 @@
         --font-header: "Oswald", sans-serif;
         --font-secondary: "Oswald", sans-serif;
         --font-body: "Manrope", sans-serif;
-        --font-header-size: 72px;
-        --font-header-size-medium: 48px;
-        --font-header-size-sml: 32px;
+        --font-header-size: 100px;
+        --font-header-size-medium: 72px;
+        --font-header-size-sml: 36px;
         --font-header-span-size: 21px;
         --font-header-span-size-sml: 18px;
         --font-secondary-header-size: 48px;
         --font-secondary-header-size-medium: 36px;
-        --font-secondary-header-size-sml: 18px;
+        --font-secondary-header-size-sml: 21px;
         --font-body-size: 16px;
         --font-weight-normal: 500;
         --font-weight-bold: 700;
