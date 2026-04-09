@@ -76,20 +76,20 @@ nav.primary ul li a:hover {
 /* Appearance of the sub-level links */
 nav.primary ul li li a {
 	display: block;
-	font-size: 16px;
+	font-size: 12px;
 	line-height: 39px;
-	padding: 10px 35px;
+	padding: 0px 15px;
 	color: #000000;
-	background-color: #FFFFFF;
+	background-color: var(--color-body-light);
 	text-align: left;
 	transition: 0.30s;
-	font-family: var(--font-body);
+	font-family: var(--font-header);
 }
 
 /* Appearance of the sub-level links on hover */
 nav.primary ul li li a:hover {
-	background-color: var(--color-primary);
-	color: #FFFFFF;
+	background-color: var(--color-secondary);
+	color: #000;
 }
 
 /* This controls the Primary nav dropdowns for sublinks. Should not have to edit this too muuch */

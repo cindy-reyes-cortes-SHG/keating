@@ -40,7 +40,7 @@
 	<p>Fields marked with * are required.</p>
 	<div>
 		<form method="post" action="parts-department.htm" onSubmit="return validation(this)">
-		<input type="hidden" name="form_fieldlist" value="Primary_Name,Company_Name,Email,Phone,Make,Model,Year,VIN,Part,Part_Number,Quantity,Comments">
+		<input type="hidden" name="form_fieldlist" value="Primary_Name,Company_Name,Email,Phone,Make,Model,Year,Have_Part_Number,Parts_Needed,Quantity,Comments">
 		<input type="hidden" name="form_subject" value="Parts Request Submission">
 		<input type="hidden" name="form_thankyou" value="thankyou.htm">
 		<input type="hidden" name="form_to" value="j.deleon@comarequipment.com">
@@ -69,16 +69,12 @@
 		<div class="form-field-flex">
 			<label for="Year" class="sr-only">Year</label>
 			<input type="text" name="Year" id="Year" placeholder="Year *">
-			<label for="VIN" class="sr-only">VIN</label>
-			<input type="text" name="VIN" id="VIN" placeholder="VIN">
+			<label for="Have_Part_Number" class="sr-only">Do you have a part number?</label>
+			<input type="text" name="Have_Part_Number" id="Have_Part_Number" placeholder="Do you have a part number? *">
 		</div>
 		<h3>Please specify the part you are looking for?</h3>
-		<div class="form-field-flex">
-			<label for="Part" class="sr-only">Part</label>
-			<input type="text" name="Part" id="Part" placeholder="Part *">
-			<label for="Part_Number" class="sr-only">Part Number</label>
-			<input type="text" name="Part_Number" id="Part_Number" placeholder="Part Number *">
-		</div>
+		<label for="Parts_Needed" class="sr-only">What kind of parts are needed?</label>
+		<textarea name="Parts_Needed" id="Parts_Needed" placeholder="What kind of parts are needed? *"></textarea>
 		<div class="form-field-flex select-field">
 			<label for="Quantity" class="sr-only">Quantity</label>
 			<select name="Quantity" id="Quantity">
@@ -172,17 +168,17 @@
 			return false
 		}
 
-		if (passForm.Part.value == "")
+		if (passForm.Have_Part_Number.value == "")
 		{
-			alert("Please enter the Part of your equipment.")
-			passForm.Part.focus()
+			alert("Please select whether you have a part number.")
+			passForm.Have_Part_Number.focus()
 			return false
 		}
 
-		if (passForm.Part_Number.value == "")
+		if (passForm.Parts_Needed.value == "")
 		{
-			alert("Please enter the Part Number of your equipment.")
-			passForm.Part_Number.focus()
+			alert("Please enter the kind of parts needed.")
+			passForm.Parts_Needed.focus()
 			return false
 		}
 

@@ -27,7 +27,7 @@
 	<div class="breadcrumb maxy">
 		<a href="/default.htm">Home</a>
 		<p>/</p>
-		<a href="/schedule-service.htm" class="page-name">Schedule Service</a>
+		<a href="/parts-request.htm" class="page-name">Parts Request</a>
 	</div>
 </section>
 
@@ -43,20 +43,20 @@
 </section> -->
 
 <section class="maxy-sml">
-	<h1>Schedule Service</h1>
+	<h1>Parts Request</h1>
 	<div class="form-container">
-		<form method="post" action="schedule-service.htm" onSubmit="return validation(this)">
-		<input type="hidden" name="form_fieldlist" value="Primary_Name,Last_Name,Email,Phone,State,City,Make,Model,Year,VIN,ServiceType">
-		<input type="hidden" name="form_subject" value="Schedule Service Form Submission">
+		<form method="post" action="parts-request.htm" onSubmit="return validation(this)">
+		<input type="hidden" name="form_fieldlist" value="Primary_Name,Last_Name,Email,Phone,State,City,Make,Model,Year,Have_Part_Number,Parts_Needed">
+		<input type="hidden" name="form_subject" value="Parts Request Form Submission">
 		<input type="hidden" name="form_thankyou" value="thankyou.htm">
-		<input type="hidden" name="form_to" value="alexparsons@keatingtractor.com,derekpennington@keatingtractor.com">
+		<input type="hidden" name="form_to" value="alexparsons@keatingtractor.com">
 		<input type="hidden" name="form_cc" value="austinapplebee@keatingtractor.com">
 	
 		
 
 		<div id="formpage">
 			<div class="form-header">
-				<h2>Schedule Your Service</h2>
+				<h2>Request Parts</h2>
 				<p>Fields marked with * are required.</p>
 			</div>
 
@@ -80,12 +80,6 @@
 			<input type="text" name="City" id="City" placeholder="City *">
 		</div>
 		<div class="form-field-flex">
-			<label for="State" class="sr-only">State</label>
-			<input type="text" name="State" id="State" placeholder="State *">
-			<label for="City" class="sr-only">City</label>
-			<input type="text" name="City" id="City" placeholder="City *">
-		</div>
-		<div class="form-field-flex">
 			<label for="Make" class="sr-only">Make</label>
 			<input type="text" name="Make" id="Make" placeholder="Make *">
 			<label for="Model" class="sr-only">Model</label>
@@ -95,12 +89,12 @@
 		<div class="form-field-flex">
 			<label for="Year" class="sr-only">Year</label>
 			<input type="text" name="Year" id="Year" placeholder="Year *">
-			<label for="VIN" class="sr-only">VIN</label>
-			<input type="text" name="VIN" id="VIN" placeholder="VIN">
+			<label for="Have_Part_Number" class="sr-only">Do you have a part number?</label>
+			<input type="text" name="Have_Part_Number" id="Have_Part_Number" placeholder="Do you have a part number? *">
 		</div>
 
-			<label for="ServiceType" class="sr-only">What kind of service do you need done?</label>
-			<textarea name="ServiceType" id="ServiceType" placeholder="What kind of service do you need done? *"></textarea>
+			<label for="Parts_Needed" class="sr-only">What kind of parts are needed?</label>
+			<textarea name="Parts_Needed" id="Parts_Needed" placeholder="What kind of parts are needed? *"></textarea>
 				<div id="btn" class="include-captcha">
 
 <!-- #include virtual="/tractorhousedlr/includes/shapesmodule.inc"-->
@@ -173,7 +167,6 @@
 			return false
 		}
 
-
 		if (passForm.Make.value == "")
 		{
 			alert("Please enter the Make.")
@@ -195,10 +188,17 @@
 			return false
 		}
 
-		if (passForm.ServiceType.value == "")
+		if (passForm.Have_Part_Number.value == "")
 		{
-			alert("Please enter the kind of service you need done.")
-			passForm.ServiceType.focus()
+			alert("Please select whether you have a part number.")
+			passForm.Have_Part_Number.focus()
+			return false
+		}
+
+		if (passForm.Parts_Needed.value == "")
+		{
+			alert("Please enter the kind of parts needed.")
+			passForm.Parts_Needed.focus()
 			return false
 		}
 

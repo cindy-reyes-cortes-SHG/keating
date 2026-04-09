@@ -709,11 +709,33 @@ hr{border:#000 1px solid;}
 }
 
 .cover{
-    background-color: #000;
-    color:#fff;
-    padding: 100px 40px;
     background-size: cover;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+
+    .image-container{
+        height: 100%;
+    }
+
+    img{
+        height: 100%;
+        object-fit: cover;
+    }
 }
+
+/* .cover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 8px;
+} */
 
 
 .hero-links{
@@ -874,6 +896,27 @@ hr{border:#000 1px solid;}
     }
 }
 
+
+.category-equipment-container{
+    h2{
+        text-align: left;
+        font-size: 18px;
+    }
+
+    h3{
+        font-size: 14px;
+        text-transform: capitalize;
+        font-weight: 400;;
+    }
+}
+
+.pill-cat{
+    background-color: #F1F1F1;
+    border: 1px solid #BABABA;
+    border-radius: 40px;
+    width: auto;
+}
+
 .section-1{
 
 }
@@ -998,6 +1041,55 @@ hr{border:#000 1px solid;}
         text-align: left;
         font-size: 52px;
         margin-bottom: 25px;
+    }
+
+    h2{
+        font-size: 28px;
+        text-align: left;
+        margin-bottom: 15px;
+        margin-top: 40px;
+    }
+
+    iframe{
+        width: 100%;
+        height: 450px;
+        border: none;
+        border-radius: 8px;
+    }
+}
+
+.internal-text{
+    padding-top: 0px;
+
+    h2{
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 10px;
+        margin-top: 25px;
+    }
+
+    a:not(.btn){
+        color: var(--color-black);
+        text-decoration: underline;
+    }
+}
+
+.grid-image{
+    margin: 25px 0px;
+
+
+    .image-container{
+        border-radius: 8px;
+        overflow: hidden;
+        max-width: 600px;
+        margin: 25px auto;
+        border: 1px solid #F2F2F2;
+        height: 45vh;
+        img{
+            object-fit: cover;
+            height: 100%;
+        }
+
     }
 }
 
@@ -1401,6 +1493,19 @@ a.video-chat.des-video-chat.collapsible-contact-list-item{
             font-size: 12px;
         }
     }
+
+    .footer-logo{
+        width: 170px;
+    }
+
+    .top-footer{
+        padding: 25px;
+    }
+
+     .breadcrumb-container{
+        padding: 15px 25px;
+    }
+
 	
 }
 
