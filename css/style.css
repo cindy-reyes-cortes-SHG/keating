@@ -152,11 +152,11 @@ button{
 }
 
 button:hover{
-    background-color: var(--color-primary-button);
-    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    color: var(--color-black);
 
     a{
-    color: var(--color-primary);
+    color: var(--color-black);
     }
 }
 
@@ -177,12 +177,9 @@ button:hover{
 }
 
 .secondary-btn:hover{
-    background-color: var(--color-button-hover);
-    color: var(--color-body-light);
+    background-color:var(--color-black);
+    color: var(--color-white);
 
-    a{
-    color: var(--color-body-light);
-    }
 }
 
 .border-btn{
@@ -439,6 +436,7 @@ hr{border:#000 1px solid;}
 
 .top-links{
 	gap: 25px;
+    box-sizing: border-box;
 
         list-style-type: none;
         display: flex;
@@ -535,6 +533,7 @@ hr{border:#000 1px solid;}
     display: flex;
     gap: 10px;
     align-items: center;
+    white-space: nowrap;
 
     a{
         font-size: 14px;
@@ -563,12 +562,15 @@ hr{border:#000 1px solid;}
     p{
         margin: 0 auto;
     }
+
     h1{
         font-size: 72px;
         line-height: 80px;
+        
 
         span{
             font-size: 150px;
+            color: var(--color-secondary);
         }
     }
 
@@ -997,6 +999,7 @@ hr{border:#000 1px solid;}
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #000;
 }
 
 .video-bg-iframe{
@@ -1404,12 +1407,10 @@ padding: 50px 40px;
 
 h1, h2, h3{
     line-height: unset;
-}
 
-
-
-span{
-    all: unset;
+    span{
+        all: unset;
+    }
 }
 }
 
@@ -1437,15 +1438,24 @@ a.view-listing-details-link.des-view-listingDetails, a.email-seller.des-email-se
 }
 
 a.view-listing-details-link.des-view-listingDetails{
-    background-color: var(--color-primary);
+    background-color: var(--color-black);
 }
 
 a.email-seller.des-email-seller.collapsible-contact-list-item{
-    background-color: var(--color-primary);
+    background-color: var(--color-black);
 }
 
 a.video-chat.des-video-chat.collapsible-contact-list-item{
-    background-color: var(--color-secondary);
+    background-color: var(--color-black);
+}
+
+.ts-button{
+}
+
+.faceted-search-content .selected-facets-container .selected-facet{
+background-color: var(--color-secondary) !important;
+
+color: var(--color-black) !important;
 }
 
 /*---------- RESPONSIVE STYLES ----------*/

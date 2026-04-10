@@ -173,7 +173,7 @@ nav.primary ul ul li {
 		left: -300px;
 		width: 300px;
 		height: 100%;
-		background: var(--color-primary);
+		background: var(--color-body-light);
 		z-index: 500;
 		/* needs to be higher than #menu-button, adjust as needed */
 		overflow: hiden;
@@ -225,16 +225,18 @@ nav.primary ul ul li {
 		display: block;
 		font-size: 15px;
 		padding: 15px 35px;
-		color: #FFFFFF;
+		color: var(--color-black);
 		text-decoration: none;
 		text-align: left;
 		font-weight: 500;
 		transition: .25s;
 		cursor: pointer;
+		font-family: var(--font-header);
+		text-transform: uppercase;
 	}
 
 	nav.mobile ul li a:hover {
-		color: red;
+		color: #00000090;
 	}
 
 	/* SECOND LEVEL */
