@@ -113,7 +113,7 @@ section{
 }
 
 a.page-name{
-    color: #67676790;
+    color: #676767;
 }
 
 
@@ -138,7 +138,7 @@ button{
 }
 
 .btn{
-    font-family: var(--font-header);
+    font-family: var(--font-header) !important;
     font-size: 12px;
     background-color: var(--color-primary-button);
     color: var(--color-white);
@@ -710,7 +710,6 @@ hr{border:#000 1px solid;}
 
 .cover{
     background-size: cover;
-    height: 450px;
     border-radius: 8px;
     overflow: hidden;
     position: relative;
@@ -722,6 +721,7 @@ hr{border:#000 1px solid;}
     img{
         height: 100%;
         object-fit: cover;
+        scale: 1.05;
     }
 }
 
@@ -1063,7 +1063,7 @@ hr{border:#000 1px solid;}
 
     h2{
         font-weight: 500;
-        font-size: 18px;
+        font-size: 19px;
         margin-bottom: 10px;
         margin-top: 25px;
     }
@@ -1072,11 +1072,14 @@ hr{border:#000 1px solid;}
         color: var(--color-black);
         text-decoration: underline;
     }
+
+        ul{
+
+            margin: 25px 30px
+        }
 }
 
 .grid-image{
-    margin: 25px 0px;
-
 
     .image-container{
         border-radius: 8px;
@@ -1084,10 +1087,10 @@ hr{border:#000 1px solid;}
         max-width: 600px;
         margin: 25px auto;
         border: 1px solid #F2F2F2;
-        height: 45vh;
         img{
             object-fit: cover;
             height: 100%;
+            scale: 1.05;
         }
 
     }
@@ -1117,6 +1120,7 @@ hr{border:#000 1px solid;}
         text-align: left;
         margin-bottom: 10px;
         font-size: 28px;
+        margin-top: 0px;
     }
 }
 
@@ -1133,6 +1137,8 @@ hr{border:#000 1px solid;}
     padding: 10px 10px;
     border-radius: 5px;
     font-family: var(--font-body);
+        box-sizing: border-box;
+
 }
 
 #formpage textarea{
@@ -1140,6 +1146,23 @@ hr{border:#000 1px solid;}
     border-radius: 5px;
     padding: 10px 10px;
     font-family: var(--font-body);
+        box-sizing: border-box;
+
+}
+
+#formpage .clear{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+
+#formpage select{
+    border: 1px solid #8B8B8B25 !important;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-family: var(--font-body);
+    width: 50%;
+    box-sizing: border-box;
 }
 
 input.submit-button{
@@ -1178,11 +1201,110 @@ div#submit-btn{
 }
 
 
+.radio-inputs {
+    display: flex;
+    gap: 6px;
+}
+
+
 /*-------- CONTACT STYLES --------*/
 
 .google-maps{
     
 }
+
+.specials-page{
+    max-width: 800px;
+
+
+    .image-container{
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #F2F2F2;
+
+        img{
+            object-fit: contain;
+            height: 100%;
+        }
+
+
+    }
+        .col-2-sml{
+            width: 25%;
+        }
+
+    .button-container{
+        margin-top: 25px;
+    }
+
+}
+
+ul.sidebar-quick{
+    list-style-type: none;
+    border: 1px solid #F2F2F2;
+    border-radius: 8px;
+    overflow: hidden;
+
+    li a{
+        color: var(--color-black);
+        font-family: var(--font-header);
+        text-transform: uppercase;
+        font-size: 14px;
+        display: block;
+        padding: 10px 15px;
+        transition: .25s;
+        border-bottom: 1px solid #F2F2F295;
+        font-weight: 500;
+
+        &:hover{
+            background-color: var(--color-black);
+            color: var(--color-white);
+        }
+    }
+}
+
+    .blog-pages{
+        .specials-page{
+            max-width: unset !important;
+            margin-top: 50px;
+
+
+        .col-2-lrg{
+            width: 75%;
+        }
+
+        }
+
+        .internal-text{
+                h2:first-child{
+         margin-top: 0px;
+        }
+
+    }
+
+        .cover{
+            height: unset;
+
+            img{
+                object-fit: contain;
+                scale: 1.05;
+            }
+        }
+
+        .grid-image{
+            .image-container{
+                height: unset;
+                margin: 25px 0px;
+
+                img{
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+    }
+
+
 
 /*-------- FOOTER STYLES ----------------*/
 footer{
@@ -1381,6 +1503,10 @@ a.video-chat.des-video-chat.collapsible-contact-list-item{
 
     .banner-slide{
         height: 150px;
+    }
+
+    .specials-page{
+        flex-direction: column;
     }
 }
 

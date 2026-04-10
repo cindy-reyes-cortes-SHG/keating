@@ -57,3 +57,32 @@
 
 <!-- Parts Inventory -->
 /inventory/?/parts/search?DSCompanyID=2004&settingsCRMID=30017
+
+
+<!-- New Equipment -->
+/inventory/?/listings/for-sale/equipment/all?DSCompanyID=2004&settingsCRMID=30017&dlr=1&condition=new
+
+<!-- Used Equipment -->
+/inventory/?/listings/for-sale/equipment/all?DSCompanyID=2004&settingsCRMID=30017&dlr=1&condition=used
+
+
+<!-- Hot List -->
+/inventory/?/listings/for-sale/equipment/all?DSCompanyID=2004&settingsCRMID=30017&dlr=1&keyword=hotlist
+
+<!-- View All Equipment -->
+/inventory/?/listings/for-sale/equipment/all?DSCompanyID=2004&settingsCRMID=30017&dlr=1
+
+<!-- Agriculture -->
+/inventory/?/listings/for-sale/farm-equipment/464?DSCompanyID=2004&settingsCRMID=30017&dlr=1
+
+<!-- Tractors -->
+/inventory/?/listings/for-sale/tractors/1100?DSCompanyID=2004&settingsCRMID=30017&dlr=1
+
+<!-- Utility -->
+/inventory/?/listings/for-sale/utility-vehicles/1171?DSCompanyID=2004&settingsCRMID=30017&dlr=1
+
+<!-- Lawn & Garden -->
+/inventory/?/listings/for-sale/outdoor-power/1185?DSCompanyID=2004&settingsCRMID=30017&dlr=1
+
+<!-- Job Listings -->
+/inventory/?/job-listings?AccountCRMID=30017&settingsCRMID=30017&dlr=1
