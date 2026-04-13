@@ -46,7 +46,7 @@
 	<h1>Parts Request</h1>
 	<div class="form-container">
 		<form method="post" action="parts-request.htm" onSubmit="return validation(this)">
-		<input type="hidden" name="form_fieldlist" value="Primary_Name,Last_Name,Email,Phone,State,City,Make,Model,Year,Have_Part_Number,Parts_Needed">
+		<input type="hidden" name="form_fieldlist" value="Primary_Name,Last_Name,Email,Phone,Address,Zip,State,City,Make,Model,Year,Have_Part_Number,Parts_Needed">
 		<input type="hidden" name="form_subject" value="Parts Request Form Submission">
 		<input type="hidden" name="form_thankyou" value="thankyou.htm">
 		<input type="hidden" name="form_to" value="alexparsons@keatingtractor.com">
@@ -72,6 +72,12 @@
 			<input type="email" name="Email" id="Email" placeholder="Email *">
 			<label for="Phone" class="sr-only">Phone</label>
 			<input type="text" name="Phone" id="Phone" placeholder="Phone *">
+		</div>
+		<div class="form-field-flex">
+			<label for="Address" class="sr-only">Address</label>
+			<input type="text" name="Address" id="Address" placeholder="Address *">
+			<label for="Zip" class="sr-only">Zip</label>
+			<input type="text" name="Zip" id="Zip" placeholder="Zip *">
 		</div>
 		<div class="form-field-flex">
 			<label for="State" class="sr-only">State</label>
@@ -150,6 +156,20 @@
 		{
 			alert("Please enter your Phone.")
 			passForm.Phone.focus()
+			return false
+		}
+		
+		if (passForm.Address.value == "")
+		{
+			alert("Please enter your Address.")
+			passForm.Address.focus()
+			return false
+		}
+		
+		if (passForm.Zip.value == "")
+		{
+			alert("Please enter your Zip.")
+			passForm.Zip.focus()
 			return false
 		}
 		

@@ -314,7 +314,9 @@ button:hover{
     }
 }
 
-
+.slider-specials-container{
+    overflow: hidden;
+}
 
 /*-------------SLIDER----------------------*/
 
@@ -437,6 +439,7 @@ hr{border:#000 1px solid;}
 .top-links{
 	gap: 25px;
     box-sizing: border-box;
+    flex-wrap: wrap;
 
         list-style-type: none;
         display: flex;
@@ -888,6 +891,8 @@ hr{border:#000 1px solid;}
 
 .category-equipment{
     gap: 50px;
+    overflow: hidden;
+    
     h2{
         font-size: 25px;
         text-align: left;
@@ -1041,10 +1046,12 @@ hr{border:#000 1px solid;}
             color: var(--color-secondary);
           }
 
-    h2{
+    h1{
         color: var(--color-white);
         text-align: left;
         margin-bottom: 20px;
+        font-size: var(--font-header-size-medium);
+        line-height: 1;
   
     }
 
