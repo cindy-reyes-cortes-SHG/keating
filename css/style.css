@@ -1423,9 +1423,7 @@ h1, h2, h3{
     }
 }
 
-.btn, button{
-    all: unset;
-}
+
 
 
 
@@ -1607,6 +1605,25 @@ color: var(--color-black) !important;
         padding: 25px 40px;
     }
 
+    .grid-image{
+        margin-top: 25px;
+
+        .image-container{
+            max-width: unset;
+            margin: 0;
+        }
+    }
+
+    .blog-pages {
+        .grid-image{
+        margin: 25px 0px;
+
+        .image-container{
+            max-width: unset;
+            margin: 0;
+        }
+        }
+    }
 }
 
 @media only screen and (max-width: 500px) {
