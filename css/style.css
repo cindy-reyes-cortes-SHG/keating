@@ -1417,9 +1417,7 @@ padding: 50px 40px;
 h1, h2, h3{
     line-height: unset;
 
-    span{
-        all: unset;
-    }
+
 }
 }
 
