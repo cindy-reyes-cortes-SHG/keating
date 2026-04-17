@@ -603,6 +603,7 @@ hr{border:#000 1px solid;}
         font-size: 12px !important;
         width: 100% !important;
         box-sizing: border-box !important;
+        height: 40px !important;
     }
 }
 
